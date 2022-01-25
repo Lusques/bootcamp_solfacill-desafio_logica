@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  // border: 0;
+  outline: none;
+  box-sizing: border-box;
+
+  list-style: none;
+  font-weight: 400;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-decoration: none;
+
+  transition: inherit;
+}
+
+@mixin media($width) {
+@media screen and(max-width: $width) {
+  @content
+}
+  
+}
+// = variáveis =
+$yellow: #fbe049;
+$font_yellow: #837526;
+//  === variáveis ===
+// = classes generalistas =
+.upper {
+  text-transform: uppercase;
+}
+.button {
+  margin-top: 20px;
+  border: solid 1px $font_yellow;
+  border-radius: 3px;
+  height: fit-content;
+  width: fit-content;
+  padding: 3px 10px;
+
+  cursor: pointer;
+
+  background-color: $yellow;
+
+  & > p {
+    font-size: 18px;
+    color: $font_yellow;
+  }
+}
+// === classes generalistas ===
+#all_content {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.header_footer__container {
+  padding: 0 50px;
+  height: 125px;
+  width: 100%;
+
+  display: flex;
+
+  background-color: $yellow;
+
+  > div {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: 0.6s;
+  }
+
+  h1,
+  h2 {
+    font-size: 42px;
+    font-weight: 450;
+
+    color: $font_yellow;
+
+    @include media(480px){
+      font-size: 28px;
+    }
+  }
+  h2 {
+    font-size: 35px;
+  }
+
+  p{
+    margin: auto;
+    font-size: 25px;
+    color: $font_yellow;
+  }
+
+  .logo {
+    cursor: pointer;
+    &:hover {
+      color: #6b6b6b;
+      .logo__a {
+        color: #ffab00;
+      }
+    }
+  }
+
+  .name {
+    &:hover {
+      color: #888;
+    }
+
+    @include media(480px){
+      font-size: 24px;
+    }
+  }
+
+  @include media(480px){
+    padding: 0 25px;
+  }
+}
+.test_1 {
+  width: 100%;
+
+  display: flex;
+
+  .year__container {
+    padding: 30px 50px;
+    width: 100%;
+
+    color: #333;
+
+    > label {
+      margin-top: 25px;
+      margin-bottom: 5px;
+      display: block;
+
+      font-size: 18px;
+    }
+
+    > input {
+      padding: 0 3px;
+      border: solid 2px #333;
+      border-radius: 3px;
+      height: 30px;
+      width: 180px;
+
+      font-size: 18px;
+    }
+
+    @include media(480px){
+      padding: 15px 20px;
+    }
+  }
+
+  .year__result {
+    padding: 30px 50px;
+    position: relative;
+    width: 100%;
+
+    color: #333;
+
+    .result_1 {
+      margin: 50px auto;
+      width: fit-content;
+      font-size: 35px;
+    }
+
+    @include media(480px){
+      padding: 15px 20px;
+    }
+  }
+}
+
+.test_2 {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  color: #333;
+  .placar__container {
+    padding: 30px 50px;
+    width: 100%;
+
+    label {
+      margin-top: 15px;
+      margin-bottom: 5px;
+      display: block;
+
+      font-size: 18px;
+    }
+
+    input {
+      padding: 0 3px;
+      border: solid 2px #333;
+      border-radius: 3px;
+      height: 30px;
+      width: 180px;
+
+      font-size: 18px;
+    }
+
+    .placar__inputs {
+      margin-top: 35px;
+
+      .time__buttons {
+        margin-top: 20px;
+        width: 180px;
+
+        display: flex;
+        justify-content: space-between;
+
+        color: $font_yellow;
+
+        &__button {
+          width: fit-content;
+          padding: 3px 10px;
+          border: solid 1px $font_yellow;
+          border-radius: 3px;
+
+          cursor: pointer;
+          font-size: 18px;
+          background-color: $yellow;
+        }
+      }
+    }
+
+    @include media(480px){
+      padding: 15px 20px;
+    }
+  }
+
+  .placar__ponctuation {
+    margin-top: 30px;
+    width: 180px;
+
+    h2 {
+      margin-bottom: 15px;
+    }
+    table {
+      width: 100%;
+      font-size: 18px;
+      font-weight: bold;
+      tr {
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+
+        th {
+          display: block;
+        }
+      }
+    }
+
+    @include media(480px){
+      padding: 15px 20px;
+    }
+  }
+
+  .placar__result {
+    padding: 30px 50px;
+    width: 100%;
+
+    .result_2 {
+      margin: 50px auto;
+      width: fit-content;
+      font-size: 35px;
+    }
+
+    @include media(480px){
+      padding: 15px 20px;
+    }
+  }
+}

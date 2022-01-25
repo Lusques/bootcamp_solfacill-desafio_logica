@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="https://github.com/Lusques">
+  <link rel="shortcut icon" href="image/sun.png" type="image/png">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Bootcamp - Solfácil</title>
+</head>
+<body>
+  <section id="all_content">
+    <header class="header_footer__container">
+      <div>
+        <a href="https://landing.solfacil.com.br/" target="_blank">
+          <h1 class="logo upper">Solf<span class="logo__a">a</span>cil</h1>
+        </a>
+        <a href="https://github.com/Lusques" target="_blank">
+          <h2 class="name">Lucas Silva</h2>
+        </a>
+      </div>
+    </header>
+    <main>
+      <section class="test_1">
+        <div class="year__container">
+          <h2>Teste 1</h2>
+          <label for="year">
+            Ano
+          </label>
+          <input id="year" type="number" min="0">
+          <div class="button">
+            <p>calcular</p>
+          </div>
+        </div>
+        <div class="year__result">
+          <h2>Século:</h2>
+          <p class="result_1">0</p>
+        </div>
+      </section>
+      <section class="test_2">
+        <div class="placar__container">
+          <h2>Teste 2</h2>
+          <div class="placar__inputs">
+            <label for="timeX">Time X</label>
+            <input id="timeX" type="number" min="0">
+            <label for="timeY">Time Y</label>
+            <input id="timeY" type="number" min="0">
+
+            <div class="time__buttons">
+              <div class="time__buttons__button">adicionar</div>
+              <div class="time__buttons__button">resetar</div>
+            </div>
+          </div>
+          <div class="placar__ponctuation">
+            <h2>Placar:</h2>
+            <table>
+              <tr>
+                <th>X</th>
+                <th>Y</th>
+              </tr>
+            </table>
+
+          </div>
+        </div>
+        <div class="placar__result">
+          <h2>Total de pontos:</h2>
+          <p class="result_2">0</p>
+        </div>
+      </section>
+    </main>
+    <footer class="header_footer__container">
+      <p>Copy&copy;2022</p>
+    </footer>
+
+  </section>
+  <script src="script/script.js"></script>
+</body>
+</html>
